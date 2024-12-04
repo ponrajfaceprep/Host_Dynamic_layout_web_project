@@ -1,0 +1,102 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.grid-item1{
+  grid-area: item1;
+  display: flex;
+  background-color: #1F1F1F;
+  color: #77d525bd;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #77d525;
+}
+.grid-item2{
+  background-color: #1f1f1ffb;
+  grid-area: item2;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 1px dashed #DB33DB;
+}
+.grid-item3 h2{
+  color: #77d525bd;
+  border: 1px dashed #33A5DB;
+}
+.grid-item2 a{
+  font-size: 18px;
+  text-decoration: none;
+  color: #CBE4DE;
+  padding: 5px;
+  position: relative;
+  border: 1px dashed #33A5DB;
+
+
+  /* background-color: #ffcad4;
+  color: #343a40;
+  border: 1px solid ghostwhite; */
+}
+
+.grid-item2 a:hover{
+  /* color: #343a40; */
+  background-color: #77d5255b;
+}
+.grid-item3{
+  background-color: #1f1f1ff1;
+  border: 1px dashed #DB3333;
+  grid-area: item3;
+  padding: 20px;
+}
+
+.grid-item3 p{
+  padding: 10px;
+  color: #CBE4DE;
+  border: 1px dashed #BCDB33;
+
+  /* background-color: steelblue; */
+}
+.infor{
+  position: relative;
+  top: 10px;
+}
+.grid-item4{
+  grid-area: item4;
+  display: flex;
+  background-color: #1F1F1F;
+  color: #77d525bd;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #77d525;
+}
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 'item1 item1 item1 item1' 'item2 item3 item3 item3' 'item4 item4 item4 item4';
+  grid-template-rows: 100px auto 60px;
+  grid-template-columns: 200px auto auto auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-item1 { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid-item2 { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid-item3 { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid-item4 { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid-container {
+    height: 200vh;
+    grid-template-areas: 'item1 item1 item1 item1' 'item2 item2 item2 item2' 'item3 item3 item3 item3' 'item4 item4 item4 item4';
+    grid-template-rows: 120px 120px auto 80px;
+  }
+}
